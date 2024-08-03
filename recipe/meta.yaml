@@ -1,7 +1,6 @@
 {% set version = "1.7.9" %}
 
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-rselenium
@@ -14,9 +13,9 @@ source:
   sha256: e249a675612891fe73e639179b9082bd250c0c63eccc98928ce9d175dd030da2
 
 build:
-  merge_build_host: true  # [win]
-  skip: true  # [win]
-  number: 2
+  # Checking windows to see if it passes. Uncomment the line if it fails.
+  # skip: true  # [win]
+  number: 3
   rpaths:
     - lib/R/lib/
     - lib/
