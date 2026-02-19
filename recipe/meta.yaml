@@ -1,4 +1,4 @@
-{% set version = "1.7.9" %}
+{% set version = "1.7.10" %}
 
 {% set posix = 'm2-' if win else '' %}
 
@@ -10,12 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RSelenium_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RSelenium/RSelenium_{{ version }}.tar.gz
-  sha256: e249a675612891fe73e639179b9082bd250c0c63eccc98928ce9d175dd030da2
+  sha256: 2f63848245e6e64f2d48f3dfc2c72d4d44b0844ad04e2b371a2cff422cc3db88
 
 build:
   # Checking windows to see if it passes. Uncomment the line if it fails.
   # skip: true  # [win]
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -48,8 +48,8 @@ test:
 about:
   home: http://docs.ropensci.org/RSelenium
   license: AGPL-3.0-or-later
-  summary: Provides a set of R bindings for the 'Selenium 2.0 WebDriver' (see <https://selenium.dev/documentation/en/> for more information) using the 'JsonWireProtocol' (see <https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol> for more information). 'Selenium 2.0 WebDriver' allows driving a web browser natively
-    as a user would either locally or on a remote machine using the Selenium server it marks a leap forward in terms of web browser automation. Selenium automates web browsers (commonly referred to as browsers). Using RSelenium you can automate browsers locally or remotely.
+  summary: Provides a set of R bindings for the 'Selenium 2.0 WebDriver' (see <https://selenium.dev/documentation/en/> for more information) using the 'JsonWireProtocol' (see <https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol> for more information). 'Selenium 2.0 WebDriver' allows driving a web browser 
+    natively as a user would either locally or on a remote machine using the Selenium server it marks a leap forward in terms of web browser automation. Selenium automates web browsers (commonly referred to as browsers). Using RSelenium you can automate browsers locally or remotely.
   license_family: AGPL
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/AGPL-3
